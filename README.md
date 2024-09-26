@@ -8,8 +8,6 @@ Features
 
 •Priority Setting: Assign priorities (high, medium, low) to tasks.
 
-•Progress Tracking: Mark tasks as completed.
-
 •Editable Tasks: Easily edit or delete tasks as your needs change.
 
 •Task Search : Track your task by searching through your list.
