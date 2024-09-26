@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List </title>
+    <link rel="stylesheet" href="todo.css">
+</head>
+<body>
+    <div class="todo-container">
+        <h1>📝 Task Tracker</h1>
+        <div class="search-bar">
+            <input type="text" id="search-task" placeholder="Search tasks...">
+        </div>
+        <div class="todo-input">
+            <input type="text" id="new-task" placeholder="Add a new task...">
+            <select id="priority">
+                <option value="low">Low Priority</option>
+                <option value="medium">Medium Priority</option>
+                <option value="high">High Priority</option>
+            </select>
+            <button id="add-task">+</button>
+        </div>
+        <div class="controls">
+            <button id="clear-all">Clear All Tasks</button>
+            <select id="sort-tasks">
+                <option value="default">Sort by Default</option>
+                <option value="priority">Sort by Priority</option>
+                <option value="status">Sort by Status</option>
+            </select>
+        </div>
+        <ul id="task-list">
+        </ul>
+    </div>
+    <script src="todo.js"></script>
+</body>
+</body>
+</html>

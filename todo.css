@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', 'Arial', sans-serif;
+    background: rgb(45, 146, 155);
+
+background: linear-gradient(90deg, rgb(38, 113, 120) 0%, hsla(277, 74%, 24%, 1) 100%);
+
+background: -moz-linear-gradient(90deg, rgb(43, 129, 137) 0%, hsla(277, 74%, 24%, 1) 100%);
+
+background: -webkit-linear-gradient(90deg, rgb(81, 173, 182) 0%, hsla(277, 74%, 24%, 1) 100%);
+
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#30C5D2", endColorstr="#471069", GradientType=1 );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    color: #333;
+}
+
+.todo-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 700px;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #4A4A4A;
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.search-bar {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 12px 20px;
+    border-radius: 50px;
+    border: 1px solid #e0e0e0;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background-color: #f8f9fa;
+    padding-left: 45px;
+    color: #4A4A4A;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+.search-bar input:focus {
+    border-color: #667eea;
+    outline: none;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+}
+
+.search-bar::before {
+    content: '🔍';
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    font-size: 18px;
+}
+
+.todo-input {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+#new-task {
+    flex-grow: 1;
+    padding: 12px 20px;
+    border-radius: 50px;
+    border: 1px solid #e0e0e0;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background-color: #f8f9fa;
+    color: #4A4A4A;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+#new-task:focus {
+    border-color: #667eea;
+    outline: none;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+}
+
+#priority {
+    width: 30%;
+    padding: 12px 15px;
+    border-radius: 50px;
+    border: 1px solid #e0e0e0;
+    font-size: 16px;
+    background-color: #f8f9fa;
+    color: #4A4A4A;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+}
+#add-task {
+    padding: 12px 25px;
+    font-size: 24px;
+    color: #fff;
+    background: linear-gradient(135deg, #20c997, #0d6efd);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 6px 15px rgba(13, 110, 253, 0.4);
+}
+
+#add-task:hover {
+    background: linear-gradient(135deg, #17a2b8, #0b5ed7);
+    transform: scale(1.05);
+}
+.controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    
+}
+/* Style for the sort select button */
+#sort-tasks {
+    width: 30%; /* Adjust the width as needed */
+    padding: 12px 15px; /* Padding for better touch targets */
+    border-radius: 50px; /* Rounded edges */
+    border: 1px solid #e0e0e0; /* Light border for separation */
+    font-size: 16px; /* Larger font for readability */
+    background-color: #f8f9fa; /* Light background */
+    color: #4A4A4A; /* Text color */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transition */
+}
+
+#sort-tasks:hover {
+    background-color: #e9ecef; /* Change background on hover */
+    border-color: #667eea; /* Change border color on hover */
+}
+
+#sort-tasks:focus {
+    outline: none; /* Remove default focus outline */
+    border-color: #667eea; /* Highlight border on focus */
+    box-shadow: 0 0 5px rgba(102, 126, 234, 0.5); /* Shadow effect on focus */
+}
+
+
+.controls button{
+    padding: 10px 15px;
+    border-radius: 50px;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: #f8f9fa;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s ease;
+}
+
+.controls select {
+    background-color: #f8f9fa;
+    color: #495057;
+    transition: background-color 0.3s ease;
+}
+
+.controls select:hover {
+    background-color: #e9ecef;
+}
+#clear-all {
+    background-color: #ff6f61;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.3s;
+}
+
+#clear-all:hover {
+    background-color: #f55e4e;
+    transform: scale(1.05);
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #f8f9fa;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+li.completed {
+    text-decoration: line-through;
+    color: #888;
+    background-color: #e9ecef;
+}
+
+li button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+li button.complete-btn {
+    background-color: #28a745;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+li button.complete-btn:hover {
+    background-color: #218838;
+}
+
+li button.edit-btn {
+    background-color: #ffc107;
+    color: #343a40;
+    transition: background-color 0.3s ease;
+}
+
+li button.edit-btn:hover {
+    background-color: #e0a800;
+}
+
+li button.remove-btn {
+    background: linear-gradient(135deg, #ff6b6b, #e63946);
+    color: white;
+    transition: background-color 0.3s ease, transform 0.3s;
+}
+
+li button.remove-btn:hover {
+    background: linear-gradient(135deg, #ff5a5a, #d62828);
+    transform: scale(1.05);
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideOut {
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+li {
+    animation: fadeIn 0.3s ease forwards;
+}
+
+li.removing {
+    animation: slideOut 0.5s forwards;
+}
